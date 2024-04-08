@@ -53,6 +53,20 @@ class _TransferirValoresState extends State<TransferirValores> {
                         await controller.setValorCambio(value, context);
                       },
                       decoration: InputDecoration(
+                        suffixIcon: controller.valorConverter.text.isEmpty
+                            ? null
+                            : Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: IconButton(
+                                  onPressed: () {
+                                    controller.limparDados(true);
+                                  },
+                                  icon: const Icon(
+                                    Icons.close,
+                                    size: 40,
+                                  ),
+                                ),
+                              ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(
                               10.0), // Define o raio da borda

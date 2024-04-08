@@ -81,7 +81,12 @@ class HomeController with ChangeNotifier {
     return dateFormat.format(dateTime);
   }
 
-  limparDados() {
+  limparDados(bool isEntradaTexto) {
+    if (isEntradaTexto == true) {
+      _valorConverter.text = '';
+      notifyListeners();
+      return;
+    }
     _fromSigla = '';
     _toSigla = '';
     _fromNameCountry = '';

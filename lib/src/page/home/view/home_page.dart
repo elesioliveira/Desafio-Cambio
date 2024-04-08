@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           actions: [
             IconButton(
                 onPressed: () {
-                  controller.limparDados();
+                  controller.limparDados(false);
                 },
                 icon: const Icon(Icons.restore))
           ],

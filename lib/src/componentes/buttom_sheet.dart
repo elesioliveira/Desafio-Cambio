@@ -48,7 +48,7 @@ class _ButtomSheetState extends State<ButtomSheet> {
                 ),
                 child: ListView.separated(
                     padding:
-                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        const EdgeInsets.only(left: 10, right: 10, bottom: 60),
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
